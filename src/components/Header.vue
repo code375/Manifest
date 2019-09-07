@@ -19,7 +19,7 @@
         <li><a href="#join">Присоединится</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#rules">Правила</a></li>
-        <li><a href="//forums.code375.org">Форум</a></li>
+        <li><a href="//forums.code375.org" target="_blank">Форум</a></li>
       </ul>
     </nav>
   </div>

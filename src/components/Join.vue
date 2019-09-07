@@ -1,50 +1,25 @@
 <template>
   <div id="join" class="content" name="join">
-    <span class="title">Как к нам присоединиться?</span>
-    <div class="networks">
-      <ul class="list">
-        <li><a class="link" href="https://vk.com/code375"><font-awesome-icon :icon="['fab', 'vk']" /></a></li>
-        <li><a class="link" href="https://t.me/Code375"><font-awesome-icon :icon="['fab', 'telegram']" /></a></li>
-        <li><a class="link" href="https://twitter.com/code375org"><font-awesome-icon :icon="['fab', 'twitter']" /></a></li>
-        <li><a class="link" href="#"><font-awesome-icon :icon="['fab', 'youtube']" /></a></li>
-      </ul>
-    </div>
+    <span class="title">Мы в телеграме:</span>
     <div class="telegrams">
       <div class="left">
         <div class="block">
           <span class="title">Тематические чаты:</span>
-          <ul>
-            <li><a href="">Чат Code375: https://t.me/Code375org</a></li>
-            <li><a href="">Чат оффтопа: https://t.me/protestby_offtop</a></li>
-            <li><a href="">Чат повестки: https://t.me/pozvachat</a></li>
+          <ul class="links">
+            <li class="link">Code375: <a href="//t.me/Code375org" target="_blank">@Code375org</a></li>
+            <li class="link">Чат оффтопа: <a href="//t.me/protestby_offtop" target="_blank">@protestby_offtop</a></li>
           </ul>
         </div>
         <div class="block">
           <span class="title">Областные чаты:</span>
-          <ul>
-            <li><a href="">Брест - https://t.me/protestby_brest</a></li>
-            <li><a href="">Витебск - https://t.me/protestby_vitebsk</a></li>
-            <li><a href="">Гомель - https://t.me/protestby_gomel</a></li>
-            <li><a href="">Гродно - https://t.me/protestby_grodno</a></li>
-            <li><a href="">Минск - https://t.me/protestby_minsk</a></li>
-            <li><a href="">Могилёв - https://t.me/protestby_mogilev</a></li>
+          <ul class="links">
           </ul>
         </div>
       </div>
       <div class="right">
         <div class="block">
           <span class="title">Региональные чаты:</span>
-          <ul>
-            <li><a href="">Барановичи - https://t.me/protestby_bar</a></li>
-            <li><a href="">Бобруйск - https://t.me/protestby_bobruisk</a></li>
-            <li><a href="">Борисов - https://t.me/protestby_borisov</a></li>
-            <li><a href="">Орша - https://t.me/protestby_orsha</a></li>
-            <li><a href="">Пинск - https://t.me/protestby_pinsk</a></li>
-            <li><a href="">Речица - https://t.me/protestby_rechitsa</a></li>
-            <li><a href="">Слоним - https://t.me/protestby_slonim</a></li>
-            <li><a href="">Слуцк - https://t.me/protestby_slutsk</a></li>
-            <li><a href="">Солигорск - https://t.me/protestby_soligorsk</a></li>
-            <li><a href="">Хойники - https://t.me/protestby_khoiniki</a></li>
+          <ul class="links">
           </ul>
         </div>
       </div>
@@ -77,13 +52,9 @@ export default {
 
 #join > .title {
   font-size: 50px;
-  margin: 100px auto 50px;
+  margin: 100px auto 10px;
   font-weight: bold;
-}
-
-#join .networks ul {
-  display: flex;
-  flex-direction: row;
+  color: #d64c4c;
 }
 #join .list .link {
   margin: 10px;
@@ -95,7 +66,7 @@ export default {
 }
 
 #join .telegrams {
-  margin: 20px auto;
+  margin: 0 auto 20px;
   display: flex;
   flex-direction: row;
   min-width: 700px;
@@ -114,6 +85,7 @@ export default {
 #join .telegrams .block .title {
   font-size: 30px;
   margin-bottom: 5px;
+  color: #d64c4c;
 }
 #join .telegrams ul {
   display: flex;
@@ -122,4 +94,13 @@ export default {
 #join .telegrams a {
   color: white;
 }
+
+#join .telegrams .block .link {
+  color: #d64c4c;
+}
+
+#join .telegrams .block .link a {
+  color: white;
+}
+
 </style>
