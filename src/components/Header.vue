@@ -10,7 +10,7 @@
     <section id="about" name="about">
       <span class="description">
         <!-- eslint-disable max-len -->
-        Мы активисты, которым не безразлична судьба нашей страны. Все Мы сторонники разных организаций и идеологий, но внутри данного движения Мы вне всего этого. Всех нас объединяет одна цель — светлое будущее нашей страны и эта цель благодоря, которой у нас нет противоречий и нас невозможно разобщить.
+        Мы активисты, которым не безразлична судьба нашей страны. Все Мы сторонники разных организаций и идеологий, но внутри данного движения Мы вне всего этого. Всех нас объединяет одна цель — светлое будущее нашей страны и эта цель, благодаря которой у нас нет противоречий и нас невозможно разобщить.
       </span>
     </section>
     <nav class="navbar" :class="{sticky: sticky}" ref="navbar">
@@ -43,7 +43,6 @@ export default {
   },
   watch: {
     scrollY() {
-      console.log(this.scrollY, this.navOffsetTop)
       if (this.scrollY > this.navOffsetTop) {
         this.sticky = true;
       } else {
@@ -108,6 +107,7 @@ export default {
 }
 
 #header .navbar {
+  -webkit-transform: translate3d(0,0,0);
   padding: 10px;
   box-sizing: border-box;
   background: #2f2929;
