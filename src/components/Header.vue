@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="content">
+  <div id="header" class="content" >
     <div id="logotype">
       <img src="../assets/logo.svg" id="logo">
       <div class="info">
@@ -13,7 +13,7 @@
         Мы активисты, которым не безразлична судьба нашей страны. Все Мы сторонники разных организаций и идеологий, но внутри данного движения Мы вне всего этого. Всех нас объединяет одна цель — светлое будущее нашей страны и эта цель благодоря, которой у нас нет противоречий и нас невозможно разобщить.
       </span>
     </section>
-    <nav class="navbar">
+    <nav class="navbar" :class="{sticky: sticky}" ref="navbar">
       <ul>
         <li><a href="#tasks">Цели</a></li>
         <li><a href="#join">Присоединится</a></li>
@@ -25,6 +25,35 @@
   </div>
 </template>
 
+<script type="text/javascript">
+export default {
+  data() {
+    return {
+      scrollY: null,
+      sticky: false,
+      navOffsetTop: 0,
+    }
+  },
+  mounted() {
+    this.navOffsetTop = this.$refs.navbar.offsetTop;
+
+    window.addEventListener('scroll', (event) => {
+      this.scrollY = Math.round(window.scrollY);
+    });
+  },
+  watch: {
+    scrollY() {
+      console.log(this.scrollY, this.navOffsetTop)
+      if (this.scrollY > this.navOffsetTop) {
+        this.sticky = true;
+      } else {
+        this.sticky = false;
+      }
+    }
+  }
+}
+</script>
+
 
 <style type="text/css">
 #header a {
@@ -33,13 +62,16 @@
 
 #header {
   background: #2f2929;
+  min-height: 100vh!important;
+  display: flex;
+  flex-direction: column;
 }
 
 #header > #logotype {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  flex-grow: 3;
 }
 
 #header > #logotype > #logo {
@@ -60,15 +92,14 @@
   font-size: 20px;
 }
 
-
 #header #about {
   color: white;
-  height: 200px;
   width: 100%;
   align-items: center;
   box-sizing: border-box;
   justify-content: center;
   text-align: center;
+  flex-grow: 2;
 }
 #header #about > .description {
   display: inline-block;
@@ -77,8 +108,9 @@
 }
 
 #header .navbar {
-  height: 100px;
-  bottom: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #2f2929;
   width: 100%;
   display: inline-flex;
   justify-content: center;
@@ -98,5 +130,11 @@
   background: #d64c4c;
   padding: 10px;
   border-radius: 3px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 </style>

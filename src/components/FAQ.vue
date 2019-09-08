@@ -92,7 +92,7 @@ export default {
 #faq .questions {
   max-width: 400px;
   min-width: 700px;
-  margin: 50px auto;
+  margin: 60px auto;
 }
 #faq .question {
   display: flex;

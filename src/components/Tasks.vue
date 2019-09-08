@@ -116,7 +116,7 @@ export default {
   font-weight: bold;
   font-size: 50px;
   height: 60px;
-  margin: 40px auto 0;
+  margin: 60px auto 0;
 }
 #tasks .task {
   display: flex;
