@@ -15,5 +15,9 @@ export default new Router({
       path: '/volounter',
       name: 'Volounter',
     },
+    {
+      path: '/tasks',
+      name: 'Tasks'
+    },
   ],
 });
