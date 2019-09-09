@@ -5,6 +5,7 @@
     <join></join>
     <faq></faq>
     <rules></rules>
+    <basement></basement>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Tasks from '@/components/Tasks';
 import Join from '@/components/Join';
 import FAQ from '@/components/FAQ';
 import Rules from '@/components/Rules';
+import Footer from '@/components/Footer';
 
 export default {
   components: {
@@ -22,6 +24,7 @@ export default {
     join: Join,
     faq: FAQ,
     rules: Rules,
+    basement: Footer,
   },
 }
 
