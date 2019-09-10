@@ -34,7 +34,7 @@
 
 #rules .block {
   background: #eaeae2;
-  padding: 20px 50px;
+  padding: 20px 20px;
   margin: 30px;
   display: flex;
   flex-direction: column;

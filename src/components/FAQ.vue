@@ -90,8 +90,7 @@ export default {
   display: flex;
 }
 #faq .questions {
-  max-width: 400px;
-  min-width: 700px;
+  max-width: 800px;
   margin: 60px auto;
 }
 #faq .question {

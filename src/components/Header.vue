@@ -36,7 +36,6 @@ export default {
   },
   mounted() {
     this.navOffsetTop = this.$refs.navbar.offsetTop;
-
     window.addEventListener('scroll', (event) => {
       this.scrollY = Math.round(window.scrollY);
     });
@@ -55,6 +54,23 @@ export default {
 
 
 <style type="text/css">
+
+@media(min-width: 601px) {
+  #header > #logotype {
+    flex-direction: row;
+  }
+}
+
+@media(max-width: 600px) {
+  #header > #logotype {
+    flex-direction: column;
+  }
+}
+
+#header.content {
+ padding: 10px 0!important;
+}
+
 #header a {
   color: white;
 }
@@ -102,8 +118,9 @@ export default {
 }
 #header #about > .description {
   display: inline-block;
-  min-width: 700px;
   max-width: 800px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 #header .navbar {
@@ -123,7 +140,7 @@ export default {
 
 #header .navbar ul li {
   list-style: none;
-  margin: 10px;
+  margin: 10px 5px;
 }
 
 #header .navbar a {

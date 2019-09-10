@@ -2,26 +2,22 @@
   <div id="join" class="content" name="join">
     <span class="title">Мы в телеграме:</span>
     <div class="telegrams">
-      <div class="left">
-        <div class="block">
-          <span class="title">Тематические чаты:</span>
-          <ul class="links">
-            <li class="link">Code375: <a href="//t.me/Code375org" target="_blank">@Code375org</a></li>
-            <li class="link">Чат оффтопа: <a href="//t.me/protestby_offtop" target="_blank">@protestby_offtop</a></li>
-          </ul>
-        </div>
-        <div class="block">
-          <span class="title">Областные чаты:</span>
-          <ul class="links">
-          </ul>
-        </div>
+      <div class="block">
+        <span class="title">Тематические чаты:</span>
+        <ul class="links">
+          <li class="link">Code375: <a href="//t.me/Code375org" target="_blank">@Code375org</a></li>
+          <li class="link">Чат оффтопа: <a href="//t.me/protestby_offtop" target="_blank">@protestby_offtop</a></li>
+        </ul>
       </div>
-      <div class="right">
-        <div class="block">
-          <span class="title">Региональные чаты:</span>
-          <ul class="links">
-          </ul>
-        </div>
+      <div class="block">
+        <span class="title">Областные чаты:</span>
+        <ul class="links">
+        </ul>
+      </div>
+      <div class="block">
+        <span class="title">Региональные чаты:</span>
+        <ul class="links">
+        </ul>
       </div>
     </div>
   </div>
@@ -43,6 +39,23 @@ export default {
 
 
 <style type="text/css">
+
+@media(min-width: 561px) {
+  #join .telegrams {
+    flex-flow: row wrap;
+  }
+  #join .telegrams .block {
+    flex-basis: 50%;
+  }
+}
+
+@media(max-width: 560px) {
+  #join .telegrams {
+    flex-direction: column;
+  }
+}
+
+
 #join {
   background: #2f2929;
   display: flex;
@@ -68,8 +81,6 @@ export default {
 #join .telegrams {
   margin: 0 auto 20px;
   display: flex;
-  flex-direction: row;
-  min-width: 700px;
   max-width: 900px;
 }
 #join .left, #join .right {
@@ -78,9 +89,10 @@ export default {
 #join .telegrams .block {
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
   border-left: 3px solid #d64c4c;
   padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
 }
 #join .telegrams .block .title {
   font-size: 30px;

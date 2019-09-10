@@ -2,21 +2,15 @@
   <div id="tasks" name="tasks" class="content">
     <span class="title">Наши цели</span>
     <div class="lists">
-      <ul
-        class="row"
-        v-for="(row, index) in tasks.chunk_inefficient(3)"
-        :key="index"
-      >
-        <li class="task" v-if="row.length < 2"></li>
+      <ul class="row" >
         <li
-          v-for="(task, index) in row"
+          v-for="(task, index) in tasks"
           :key="index"
           class="task"
         >
           <span class="title">{{ task.title }}</span>
           <span class="description" v-html="task.description"></span>
         </li>
-        <li class="task" v-if="row.length < 3"></li>
       </ul>
 
     </div>
@@ -94,6 +88,31 @@ export default {
 
 
 <style type="text/css">
+
+@media (min-width: 800px) {
+  #tasks .task {
+    flex-basis: 33%;
+  }
+  #tasks .task .title {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 799px) {
+  #tasks .task {
+    flex-basis: 50%;
+  }
+  #tasks .task .title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  #tasks .task {
+    flex-basis: 100%;
+  }
+}
+
 #tasks {
   background: #eaeae2;
   display: flex;
@@ -118,15 +137,21 @@ export default {
   height: 60px;
   margin: 60px auto 0;
 }
+#tasks .row {
+  flex-flow: row wrap;
+  display: flex;
+  width: 100%;
+  margin: 10px 0 50px 0;
+}
 #tasks .task {
   display: flex;
   flex-direction: column;
   list-style: none;
-  width: 33%;
-  padding: 0 30px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin-bottom: 30px;
 }
 #tasks .task .title {
-  font-size: 18px;
   font-weight: bold;
   color: #383838;
   border-bottom: 3px solid #d64c4c;
@@ -137,11 +162,5 @@ export default {
   color: #383838;
 }
 
-#tasks .row {
-  flex-direction: row;
-  display: flex;
-  width: 100%;
-  margin: 10px 0 50px 0;
-}
 
 </style>
