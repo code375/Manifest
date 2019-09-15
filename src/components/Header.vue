@@ -16,7 +16,7 @@
     <nav class="navbar" :class="{sticky: sticky}" ref="navbar">
       <ul>
         <li><a href="#tasks">Цели</a></li>
-        <li><a href="#join">Присоединится</a></li>
+        <li><a href="#join">Присоединиться</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#rules">Правила</a></li>
         <li><a href="//forums.code375.org" target="_blank">Форум</a></li>
