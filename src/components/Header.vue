@@ -10,7 +10,7 @@
     <section id="about" name="about">
       <span class="description">
         <!-- eslint-disable max-len -->
-        Мы активисты, которым не безразлична судьба нашей страны. Все Мы сторонники разных организаций и идеологий, но внутри данного движения Мы вне всего этого. Всех нас объединяет одна цель — светлое будущее нашей страны и эта цель, благодаря которой у нас нет противоречий и нас невозможно разобщить.
+        Мы активисты, которым небезразлична судьба нашей страны. Все Мы сторонники разных организаций и идеологий, но внутри данного движения Мы вне всего этого. Всех нас объединяет одна цель — светлое будущее нашей страны и эта цель, благодаря которой у нас нет противоречий и нас невозможно разобщить.
       </span>
     </section>
     <nav class="navbar" :class="{sticky: sticky}" ref="navbar">
@@ -67,8 +67,23 @@ export default {
   }
 }
 
+@media(max-width: 439px) {
+  #header .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  #header .navbar ul li {
+    margin: 5px 0!important;
+  }
+  #header .navbar a {
+    display: block;
+    text-align: center;
+    border-radius: 0!important;
+  }
+}
+
 #header.content {
- padding: 10px 0!important;
+ padding: 0 0!important;
 }
 
 #header a {
@@ -125,7 +140,7 @@ export default {
 
 #header .navbar {
   -webkit-transform: translate3d(0,0,0);
-  padding: 10px;
+  padding: 10px 0;
   box-sizing: border-box;
   background: #2f2929;
   width: 100%;
